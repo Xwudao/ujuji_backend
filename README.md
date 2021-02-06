@@ -1,8 +1,28 @@
 ### 优聚集
 
-2020年初，疫情肆虐，想着
+2020年初，疫情肆虐，想着以后的规划，结果是毫无规划，可能我就是随波逐流、活在当下的人。
 
 
+
+不管怎么说，我也希望以后能自由职业且能不饿肚子，为此，为了锻炼技能，写了优聚集这个前后端分离的项目。
+
+
+
+这是第一次写较大规模的Vue.js 应用
+
+这也是第一次写较大规模的SpringBoot应用
+
+
+
+第一次写，肯定就是巨难看和维护，这点我有自知之明，但是我希望你们不要说出来。我自己知道就行。所以，于2021年我完全从零开始重构了优聚集，前端虽也是Vue.js，但是也是完全重写了。后端用golang重构。不得不说，golang没有像springboot这类似的大统一框架，对于某些方面来说也是好事，我可以完全决定我的后台应用怎么架构。而不是被springboot规定死了：你就该在这个目录写这个东西…
+
+
+
+### 仓库
+
+前端仓库（Vue.js）：[https://github.com/Xwudao/ujuji_frontend](https://github.com/Xwudao/ujuji_frontend)
+
+后端仓库（SpringBoot）：[https://github.com/Xwudao/ujuji_backend](https://github.com/Xwudao/ujuji_backend)
 
 
 
