@@ -1,0 +1,28 @@
+### 查询盒子 分页
+GET {{api}}/admin/box?size=10&page=1
+Authorization: Bearer {{token}}
+
+### 删除用户
+DELETE {{api}}/admin/box/15
+Authorization: Bearer {{token}}
+
+### 修改盒子
+PUT {{api}}/admin/box
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "id": 14,
+  "title": "无道hh"
+}
+
+### 搜索
+POST {{api}}/admin/box/search
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "key": "测试6",
+  "pageSize": 10,
+  "pageNo": 1
+}

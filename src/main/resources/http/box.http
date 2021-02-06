@@ -1,0 +1,56 @@
+### 插入数据
+POST {{api}}/user/box
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "userId": 1,
+  "title": "默认分类222_222",
+  "boxOrder": 3,
+  "titleIcon": "http://xxx.com",
+  "pwd": "1234"
+}
+
+### 修改
+
+PUT {{api}}/user/box
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "id": 27,
+  "title": "秀爱附近21321312阿萨德看发12313",
+  "boxOrder": 5,
+  "pwd": "5678"
+}
+
+### 删除
+
+DELETE {{api}}/user/box/3
+Authorization: {{token}}
+
+### 查询所属用户的所有盒子
+GET {{api}}/public/allBoxes/1
+
+### 根据用户ID查询所有
+GET {{api}}/user/box/user/1
+Authorization: {{token}}
+
+### 导入盒子
+POST  {{api}}/user/box/import
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "boxTitle": "导入的盒子123",
+  "links": [
+    {
+      "title": "书签标题",
+      "link": "https://1kjf.comaf"
+    },
+    {
+      "title": "书签标题12",
+      "link": "://1kjf.co12maf"
+    }
+  ]
+}

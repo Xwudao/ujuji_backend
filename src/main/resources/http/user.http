@@ -1,0 +1,78 @@
+### 获取验证码
+
+GET {{api}}/public/verifyCode
+
+### 登录
+POST {{api}}/auth/login
+Content-Type: application/json
+Acces-Token: dc892ac8-9b69-42f0-a4a1-a82c037c7816
+
+{
+  "username": "无道",
+  "password": "123456",
+  "email": "",
+  "verifyCode": "1",
+  "code": "MhcGX5vpsg"
+}
+> {%client.global.set("token",response.body.data.token) %}
+
+### 注册
+POST {{api}}/auth/register
+Content-Type: application/json
+
+{
+  "username": "无21212",
+  "password": "123f21a6",
+  "verifyCode": "7Se8",
+  "code": "723869104687165440",
+  "email": "12fas11@ujuji.com"
+}
+
+### 修改密码
+POST {{api}}/user/updatePassword1
+Authorization: {{token}}
+Content-Type: application/x-www-form-urlencoded
+
+oldPass=123456&newPass=1234567
+
+### 查询用户信息
+GET {{api}}/user/info
+Authorization: {{token}}
+
+### 查询用户信息
+GET {{api}}/auth/info
+Authorization: {{token}}
+
+
+### 查询所有信息
+GET {{api}}/
+
+### 查询所有备份
+GET {{api}}/user/backup
+Authorization: {{token}}
+
+### 发送修改密码的邮箱验证
+POST {{api}}/auth/sendUpdateMail
+Content-Type: application/json
+
+{
+  "username": "无道",
+  "email": "991418182@qq.com",
+  "verifyCode": "42",
+  "code": "wdlW1JWJ70"
+}
+
+### 通过邮箱验证码，请求修改密码
+POST {{api}}/auth/updatePassWithCode
+Content-Type: application/json
+
+{
+  "email": "991418182@qq.com",
+  "code": "GgcRegVyUl",
+  "newPass": "12345678"
+}
+
+### 生成token
+POST {{api}}/auth/token
+Authorization: {{token}}
+

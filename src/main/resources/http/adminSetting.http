@@ -1,0 +1,29 @@
+### 插入
+POST {{api}}/admin/globalSetting
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "name": "defaultShow",
+  "value": "misiai"
+}
+
+### 修改
+PUT {{api}}/admin/globalSetting
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "defaultShow",
+  "value": "及法角度看方法"
+}
+
+### 查询所有
+GET {{api}}/admin/globalSetting
+Authorization: {{token}}
+
+### 删除
+
+DELETE {{api}}/admin/globalSetting/1
+Authorization: {{token}}

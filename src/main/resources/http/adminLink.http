@@ -1,0 +1,29 @@
+### 查询列表 分页
+GET {{api}}/admin/link?size=10&page=1
+Authorization: Bearer {{token}}
+
+### 删除列表
+DELETE {{api}}/admin/link/21
+Authorization: Bearer {{token}}
+
+### 修改列表
+PUT {{api}}/admin/link
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "id": 21,
+  "title": "无道hh"
+}
+
+
+### 搜索
+POST {{api}}/admin/link/search
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "key": "测试啊",
+  "pageSize": 10,
+  "pageNo": 1
+}

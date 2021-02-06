@@ -1,0 +1,32 @@
+### 查询
+GET {{api}}/user/searchSite/
+Authorization: {{token}}
+
+### 新建
+POST {{api}}/user/searchSite
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "name": "百度搜索",
+  "searchUrl": "https://www.baidu.com/s?ie=UTF-8&wd=[kw]",
+  "notice": "百度一下，你就知道"
+}
+
+### 修改
+PUT {{api}}/user/searchSite
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "id": 1,
+  "name": "百度搜索2",
+  "searchUrl": "https://www.baidu.com/s?ie=UTF-8&wd=[kw]",
+  "notice": "百度一下2，你就知道"
+}
+
+### 删除
+DELETE {{api}}/user/searchSite/1
+Authorization: {{token}}

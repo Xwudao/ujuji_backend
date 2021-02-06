@@ -1,0 +1,39 @@
+### 插入数据
+POST {{api}}/user/link
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "boxId": 2,
+  "title": "这是一条链接3333",
+  "link": "http://xxx.com",
+  "description": "这是一条描述哟减肥的靠发动机",
+  "titleIcon": "https://xxxs.com"
+}
+
+### 修改
+
+PUT {{api}}/user/link
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "id": 1,
+  "boxId": 3,
+  "title": "这是一条链接222",
+  "link": "http://xx2222x.com",
+  "description": "12312312",
+  "titleIcon": "https://xxxs.com"
+}
+
+### 删除
+
+DELETE {{api}}/user/link/3
+Authorization: {{token}}
+
+### 查询所属用户的所有盒子，及其下面的所有链接
+GET {{api}}/public/allBoxes/1
+
+### 根据盒子ID查询所有
+GET {{api}}/user/link/box/18
+Authorization: {{token}}

@@ -1,0 +1,40 @@
+### 查询所有卡密分类
+
+GET {{api}}/admin/cardCode/types
+Authorization: {{token}}
+
+### 插入
+POST {{api}}/admin/cardCode
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "num": 10,
+  "type": "rename"
+}
+
+
+### 搜索
+POST {{api}}/admin/cardCode/search
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "key": "ytLY",
+  "pageSize": 20,
+  "pageNo": 1
+}
+
+### 分页查询
+POST {{api}}/admin/cardCode/find
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "pageSize": 20,
+  "pageNo": 1
+}
+
+### 删除
+DELETE {{api}}/admin/cardCode/1
+Authorization: {{token}}

@@ -1,0 +1,28 @@
+### 查询用户 分页
+GET {{api}}/admin/user?size=10&page=1
+Authorization: Bearer {{token}}
+
+### 删除用户
+DELETE {{api}}/admin/user/8
+Authorization: Bearer {{token}}
+
+### 修改用户
+PUT {{api}}/admin/user
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "id": 1,
+  "username": "无道hh"
+}
+
+### 搜索
+POST {{api}}/admin/user/search
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "key": "231",
+  "pageSize": 10,
+  "pageNo": 1
+}

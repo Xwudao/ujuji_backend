@@ -1,0 +1,55 @@
+### 后台用户查询
+GET {{api}}/user/leaveMsg?pageNo=1&pageSize=20
+Authorization: {{token}}
+
+### 增加留言
+POST {{api}}/public/msg
+Content-Type: application/json
+
+{
+  "content": "留言内容",
+  "nickname": "无道",
+  "userId": 1
+}
+
+### 查询某个用户所有留言(非置顶)
+GET {{api}}/public/msg/1?pageNo=1&pageSize=20
+
+### 查询某个用户所有置顶留言
+GET {{api}}/public/msg/fixed/1
+
+### 查询未读留言个数
+GET {{api}}/user/leaveMsg/getNonReadCount
+Authorization: {{token}}
+
+
+
+###=============需要权限===========
+
+
+### 搜索留言
+GET {{api}}/user/leaveMsg/search?kw=无道231&pageNo=1&pageSize=20
+Authorization: {{token}}
+
+### 设置置顶
+GET {{api}}/user/leaveMsg/setFixed/3
+Authorization: {{token}}
+
+### 设置已读
+GET {{api}}/user/leaveMsg/setRead/3
+Authorization: {{token}}
+
+### 回复
+
+PUT {{api}}/user/leaveMsg/reply
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "id": 2,
+  "reply": "这是回复内容"
+}
+
+### 删除
+DELETE {{api}}/user/leaveMsg/2
+Authorization: {{token}}

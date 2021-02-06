@@ -1,0 +1,42 @@
+GET {{api}}/public/system/info
+
+
+### 查询所有
+GET {{api}}/public/nav/info/misiai
+
+
+### 查询某个站点盒子信息
+GET {{api}}/public/boxes/1
+
+### 查询信息
+GET {{api}}/public/config/info/misiai
+
+### 查询盒子列表（有密码）
+GET {{api}}/public/nav/pwd/18/12312
+
+### 搜索链接
+GET {{api}}/public/search
+Content-Type: application/json
+
+{
+  "keyword": "B"
+}
+
+### 查询天气
+GET {{api}}/public/weather?city=什邡
+
+
+### 插入数据(AccessToken)
+POST {{api}}/public/token/LKwkrnUzBxCaHPtxjSKnSILJuKuwXr
+Content-Type: application/json
+
+{
+  "boxId": 1,
+  "title": "这是一条链接3333",
+  "link": "http://xxx.com",
+  "description": "这是一条描述哟减肥的靠发动机",
+  "titleIcon": "https://xxxs.com"
+}
+
+### 通过token后去boxes
+GET {{api}}/public/allBoxes/token/LKwkrnUzBxCaHPtxjSKnSILJuKuwXr

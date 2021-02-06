@@ -1,0 +1,32 @@
+### 查询列表 分页
+GET {{api}}/admin/msg?size=10&page=1
+Authorization: Bearer {{token}}
+
+
+
+
+### 删除列表
+DELETE {{api}}/admin/msg/3
+Authorization: Bearer {{token}}
+
+### 修改列表
+PUT {{api}}/admin/msg
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "id": 3,
+  "content": "和借款方发的健康"
+}
+
+
+#### 搜索
+#POST {{api}}/admin/link/search
+#Content-Type: application/json
+#Authorization: {{token}}
+#
+#{
+#  "key": "测试啊",
+#  "pageSize": 10,
+#  "pageNo": 1
+#}

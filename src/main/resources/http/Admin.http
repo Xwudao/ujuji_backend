@@ -1,0 +1,2 @@
+GET {{api}}/admin/userInfo/1
+Authorization: {{token}}

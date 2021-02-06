@@ -1,0 +1,5 @@
+GET http://localhost:4037/admin/user?username=无
+
+<> 2020-05-15T080418.200.json
+<> 2020-05-15T074607.500.json
+<> 2020-05-15T074602.200.json

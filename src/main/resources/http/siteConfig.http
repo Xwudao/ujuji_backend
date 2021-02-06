@@ -1,0 +1,16 @@
+PUT {{api}}/user/siteConfig
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "siteName": "无道的导222航",
+  "siteDesc": "这是无道的导213航2222",
+  "suffix": "122fd"
+}
+
+### 查询某用户的配置信息
+GET {{api}}/public//siteConfig/2
+
+### 后缀是否可用
+GET {{api}}/user/siteConfig/suffix/available/misiai
+Authorization: {{token}}

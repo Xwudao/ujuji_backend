@@ -1,0 +1,26 @@
+### 查询
+GET {{api}}/user/notice/
+Authorization: {{token}}
+
+### 新建
+POST {{api}}/user/notice
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "content": "这是内容哟放大镜发动机发大水发大水"
+}
+
+### 修改
+PUT {{api}}/user/notice
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "id": 1,
+  "content": "修改后的内容",
+  "longNotice": "这是长的公告，呵呵"
+}
+
